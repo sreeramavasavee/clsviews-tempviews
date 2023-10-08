@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView,FormView
+from django.views.generic import TemplateView,FormView,ListView
 from app.forms import *
 from django.http import HttpResponse
 # Create your views here.
@@ -26,3 +26,8 @@ class schoolinsertform(FormView):
         form.save()
         return HttpResponse('<center>data inserted....</center>')
 
+class displayschool(ListView):
+    model=school
+    template_name='displayschool.html'
+    context_object_name='sclist'
+    

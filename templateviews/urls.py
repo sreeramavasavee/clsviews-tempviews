@@ -22,6 +22,6 @@ urlpatterns = [
     path('temp/',temp.as_view(),name='temp'),
     path('temp_url/',TemplateView.as_view(template_name='temp_url.html'),name='temp_url'),
 
-
+    path('displayschool/',displayschool.as_view(),name='displayschool'),
     path('schoolinsertform/',schoolinsertform.as_view(),name='schoolinsertform')
 ]
